@@ -1,0 +1,96 @@
+﻿@model TesteCep2.Models.Cep
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Excluir Registro</h2>
+
+<h3>Deseja realmente excluir este registro?</h3>
+<div>
+    <h4>CEP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumCep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumCep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logradouro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logradouro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Complemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Localidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Localidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ibge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ibge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para lista", "Index")
+        </div>
+    }
+</div>
